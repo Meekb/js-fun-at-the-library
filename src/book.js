@@ -21,8 +21,13 @@ function saveReview(newReview, reviews) {
 }
 
 function calculatePageCount(bookTitle) {
-  var pageCount = bookTitle.trim().length * 20;
-  return pageCount
+  if (bookTitle.includes('The')) {
+    var pageCount = bookTitle.length * 20;
+    return pageCount
+  } else {
+    pageCount = createTitle(bookTitle).length * 20;
+    return pagecount;
+  }
 }
 
 function writeBook(bookTitle, character, genre) {

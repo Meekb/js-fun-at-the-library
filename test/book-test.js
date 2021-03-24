@@ -124,8 +124,8 @@ describe("book.js", function () {
       assert.equal(book.genre, "fantasy");
     });
 
-    it.skip("should return a different book object", function () {
-      var dragonTitle = createTitle("Dragon in the Summer");
+    it("should return a different book object", function () {
+      var dragonTitle = createTitle("The Dragon in the Summer");
       var dragonCharacter = buildMainCharacter("Dana", 25, "they/them");
       var dragonBook = writeBook(dragonTitle, dragonCharacter, "fantasy");
 
@@ -154,8 +154,8 @@ describe("book.js", function () {
     });
 
 
-    it.skip("should decrease a different book's page count to be three quarters of what it originally was", function () {
-      var dragonTitle = createTitle("Dragon in the Summer");
+    it("should decrease a different book's page count to be three quarters of what it originally was", function () {
+      var dragonTitle = createTitle("The Dragon in the Summer");
       var dragonCharacter = buildMainCharacter("Dana", 25, "they/them");
       var dragonBook = writeBook(dragonTitle, dragonCharacter, "fantasy");
 
