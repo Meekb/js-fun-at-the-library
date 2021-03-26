@@ -15,7 +15,8 @@ class Librarian {
   findBook(title) {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === title) {
-        // checkoutBook(library, title, genre)
+        //should I be able to call checkoutBook() here? Getting undefined
+        //and unsure how to set the parameters for checkoutBook()
         return `Yes, we have ${title}`;
       } else {
         return `Sorry, we do not have ${title}`
