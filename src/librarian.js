@@ -15,8 +15,8 @@ class Librarian {
   findBook(title) {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === title) {
+        // checkoutBook(library, title, genre)
         return `Yes, we have ${title}`;
-        // this.library.checkoutBook();
       } else {
         return `Sorry, we do not have ${title}`
       }

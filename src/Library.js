@@ -21,16 +21,39 @@ function addBook(library, title) {
 }
 
 function checkoutBook(library, title, genre) {
-  console.table(library.shelves.fiction)
   if (genre === 'fiction') {
-    for(var i = 0; i < library.shelves.fiction.length; i++) {
+    console.log('fiction book')
+    for (var i = 0; i < library.shelves.fiction.length; i++) {
       if (library.shelves.fiction[i].title === title) {
-        //unshelfBook.....
-        
+        library.shelves.fiction.splice([i], 1);
+        console.log(library.shelves.fiction);
+        return `You have now checked out ${title} from the ${library.name}`;
+      }
+     }
+    } else if (genre === 'nonFiction') {
+      console.log('nonFiction book')
+      for (var i = 0; i < library.shelves.nonFiction.length; i++) {
+        if (library.shelves.nonFiction[i].title === title) {
+          library.shelves.nonFiction.splice([i], 1);
+          return `You have now checked out ${title} from the ${library.name}`;
+      }
+     }
+   } else if (genre === 'fantasy') {
+      console.log('fantasy book')
+      for (var i = 0; i < library.shelves.fantasy.length; i++) {
+        if (library.shelves.fantasy[i].title === title) {
+          library.shelves.fantasy.splice([i], 1);
+          return `You have now checked out ${title} from the ${library.name}`;
       }
     }
   }
+  return `Sorry, there are currently no copies of ${title} available at the ${library.name}`
 }
+
+
+
+
+
 
 module.exports = {
   createLibrary,
