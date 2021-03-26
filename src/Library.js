@@ -26,6 +26,7 @@ function checkoutBook(library, title, genre) {
     for(var i = 0; i < library.shelves.fiction.length; i++) {
       if (library.shelves.fiction[i].title === title) {
         //unshelfBook.....
+        
       }
     }
   }
