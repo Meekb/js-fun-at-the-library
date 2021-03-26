@@ -8,19 +8,37 @@ function shelfBook(book, shelf) {
 }
 
 function unshelfBook(book, shelf) {
-  if (shelf.includes(book.title)) {
-    shelf.slice([i], 1);
-    return shelf;
-  } else {
-    return shelf;
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title.includes(book)) {
+      shelf.splice([i], 1);
+    }
   }
 }
 
+function listTitles(shelf) {
+  var allTitles = '';
+  for (var i = 0; i < shelf.length; i++) {
+    if (i < (shelf.length - 1)) {
+      allTitles += shelf[i].title + ', ';
+    } else {
+      allTitles += shelf[i].title;
+    }
+  }
+  return allTitles;
+}
 
+function searchShelf(shelf, title) {
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title === title) {
+      return true;
+    }
+  }
+  return false;
+}
 
 module.exports = {
   shelfBook,
   unshelfBook,
-  // listTitles,
-  // searchShelf
+  listTitles,
+  searchShelf
 };
