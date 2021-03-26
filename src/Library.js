@@ -20,7 +20,6 @@ function addBook(library, title) {
   }
 }
 
-
 function checkoutBook(library, title, genre) {
   for (var i = 0; i < library.shelves[genre].length; i++) {
     if (library.shelves[genre][i].title === title) {
@@ -56,10 +55,6 @@ function checkoutBook(library, title, genre) {
 //     }
 //   } return `Sorry, there are currently no copies of ${title} available at the ${library.name}`
 // }
-
-
-
-
 
 module.exports = {
   createLibrary,
