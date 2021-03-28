@@ -15,14 +15,12 @@ class Librarian {
   findBook(title) {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === title) {
-        //should I be able to call checkoutBook() here? Getting undefined
-        //and unsure how to set the parameters for checkoutBook()
-        return `Yes, we have ${title}`;
-      } else {
-        return `Sorry, we do not have ${title}`
-      }
+        this.library.shelves.fantasy.splice([i], 1);
+        return `Yes, we have ${title}`
     }
   }
+  return `Sorry, we do not have ${title}`
+}
 
   calculateLateFee(days) {
     var lateFee = Math.ceil(days * 0.25);

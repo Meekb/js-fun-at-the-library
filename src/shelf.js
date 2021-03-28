@@ -3,6 +3,7 @@ function shelfBook(book, shelf) {
     shelf.unshift(book);
     return shelf;
   } else {
+    console.log(shelf)
     return shelf;
   }
 }
@@ -12,6 +13,7 @@ function unshelfBook(book, shelf) {
     if (shelf[i].title.includes(book)) {
       shelf.splice([i], 1);
     }
+   }
   }
 }
 
