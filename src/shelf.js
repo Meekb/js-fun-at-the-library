@@ -3,17 +3,15 @@ function shelfBook(book, shelf) {
     shelf.unshift(book);
     return shelf;
   } else {
-    console.log(shelf)
     return shelf;
   }
 }
 
 function unshelfBook(book, shelf) {
   for (var i = 0; i < shelf.length; i++) {
-    if (shelf[i].title.includes(book)) {
+    if (shelf[i].title === book) {
       shelf.splice([i], 1);
     }
-   }
   }
 }
 
