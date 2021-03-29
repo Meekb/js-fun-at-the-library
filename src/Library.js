@@ -22,7 +22,6 @@ function addBook(library, title) {
 
 function checkoutBook(library, title, genre) {
   for (var i = 0; i < library.shelves[genre].length; i++) {
-    console.log('yep');
     if (library.shelves[genre][i].title === title) {
       library.shelves[genre].splice([i], 1);
       return `You have now checked out ${title} from the ${library.name}`;
