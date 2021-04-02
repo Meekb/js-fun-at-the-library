@@ -14,20 +14,16 @@ function buildMainCharacter(name, age, pronouns) {
 function saveReview(newReview, reviews) {
   if (reviews.includes(newReview)) {
     return reviews;
-  } else {
-    reviews.push(newReview);
-    return reviews;
   }
+  reviews.push(newReview);
 }
 
 function calculatePageCount(bookTitle) {
   if (bookTitle.includes('The')) {
     var pageCount = bookTitle.length * 20;
     return pageCount
-  } else {
-    pageCount = createTitle(bookTitle).length * 20;
-    return pagecount;
   }
+  pageCount = createTitle(bookTitle).length * 20;
 }
 
 function writeBook(bookTitle, character, genre) {
@@ -42,7 +38,6 @@ function writeBook(bookTitle, character, genre) {
 
 function editBook(book) {
   book.pageCount = book.pageCount * 0.75;
-    return book.pageCount;
 }
 
 

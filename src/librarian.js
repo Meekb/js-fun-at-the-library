@@ -16,6 +16,7 @@ class Librarian {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === title) {
         this.library.shelves.fantasy.splice([i], 1);
+        // this.checkoutBook(this.library, title, this.library.shelves.fantasy);
         return `Yes, we have ${title}`
     }
   }
