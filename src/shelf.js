@@ -1,9 +1,6 @@
 function shelfBook(book, shelf) {
   if (shelf.length <= 2) {
     shelf.unshift(book);
-    return shelf;
-  } else {
-    return shelf;
   }
 }
 
