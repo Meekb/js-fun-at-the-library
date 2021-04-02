@@ -7,17 +7,15 @@ class Librarian {
   greetPatron(name, morning) {
     if (morning) {
       return `Good morning, ${name}!`;
-    } else {
-      return `Hello, ${name}!`;
     }
+    return `Hello, ${name}!`;
   }
 
   findBook(title) {
     for (var i = 0; i < this.library.shelves.fantasy.length; i++) {
       if (this.library.shelves.fantasy[i].title === title) {
         this.library.shelves.fantasy.splice([i], 1);
-        // this.checkoutBook(this.library, title, this.library.shelves.fantasy);
-        return `Yes, we have ${title}`
+      return `Yes, we have ${title}`
     }
   }
   return `Sorry, we do not have ${title}`
